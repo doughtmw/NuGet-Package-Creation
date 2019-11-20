@@ -11,6 +11,8 @@ Easiest method to create packages is using the Microsoft provided tool. To creat
 6. Add **.h** include files under the *include* folder
 7. Save package, import into Visual Studio project for testing
 
+Sample layout for a project with **Id: OpenCV.Win**
+
 ![](nuget-layout.PNG)
 
 
@@ -31,4 +33,4 @@ I used [vcpkg](https://github.com/microsoft/vcpkg) for building OpenCV binaries 
 .\vcpkg.exe install opencv4[core,contrib]:x64-windows
 ```
 
-Copy output files (.lib, .dll, includes) from ```vcpkg\packages\(opencv4_x64-uwp, opencv4_x86-uwp)``` or ```vcpkg\packages\(opencv4_x64-windows, opencv4_x86-windows)``` to the relevant folders of the NuGet package tool.# NuGet-Package-Creation
+Copy output files (.lib, .dll, includes) from ```vcpkg\packages\(opencv4_x64-uwp, opencv4_x86-uwp)``` or ```vcpkg\packages\(opencv4_x64-windows, opencv4_x86-windows)``` to the relevant folders of the NuGet package tool.
