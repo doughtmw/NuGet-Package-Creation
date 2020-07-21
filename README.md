@@ -42,7 +42,7 @@ imgproc
 ```
 Disable all other modules in CMake and confirm the modules which are to be built.
 
-![](cmake-opencv-3.PNG)
+![](cmake-opencv-3.png)
 
 Open Visual Studio solution after running *Generate* in CMake. Build the project (or whatever module you would like to use). Copy output .dll files, .lib files and include files to the NuGet package and update the .targets file.
 
