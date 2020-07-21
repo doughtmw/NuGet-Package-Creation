@@ -1,0 +1,8 @@
+aruco
+calib3d
+core
+features2d
+flann
+imgcodecs
+imgproc
+world

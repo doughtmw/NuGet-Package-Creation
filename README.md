@@ -32,7 +32,7 @@ Sample layout for a project with **Id: OpenCV.Win** (targets file must have same
 
 Copy output files (.lib, .dll, includes) from ```vcpkg\packages\(opencv4_x64-uwp, opencv4_x86-uwp)``` or ```vcpkg\packages\(opencv4_x64-windows, opencv4_x86-windows)``` to the relevant folders of the NuGet package tool.
 
-### Option 2: Build OpenCV from source for HoloLens x86 UWP
+### Option 2: Build OpenCV from source for HoloLens 1 (x86) or HoloLens 2 (ARM) UWP
 Build OpenCV from source using CMake. Configure project as below:
 
 ![](cmake-opencv-1.PNG)
@@ -42,6 +42,20 @@ Build OpenCV from source using CMake. Configure project as below:
 Specify the extra modules path if you'd like to install additional modules, *Configure* then *Generate*:
 
 ![](cmake-opencv-config.PNG)
+
+Specify the modules which you are likely to use. For my purposes, these included: 
+```
+aruco
+calib3d
+core
+features2d
+flann
+imgcodecs
+imgproc
+```
+Disable all other modules in CMake and confirm the modules which are to be built.
+
+![](cmake-opencv-3.PNG)
 
 Open Visual Studio solution after running *Generate* in CMake. Build the project (or whatever module you would like to use). Copy output .dll files, .lib files and include files to the NuGet package and update the .targets file.
 
